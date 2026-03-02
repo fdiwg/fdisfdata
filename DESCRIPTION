@@ -1,0 +1,17 @@
+Package: fdisfdata
+Version: 0.1
+Date: 2026-03-02
+Title: Spatial datasets for fisheries data interoperability
+Authors@R: c(person("Emmanuel", "Blondel", role = c("aut", "cre"), email = "emmanuel.blondel1@gmail.com", comment = c(ORCID = "0000-0002-5870-5762")),
+  person("Arturo", "Muñoz Albero", role = c("ctb")))
+Maintainer: Emmanuel Blondel <emmanuel.blondel1@gmail.com>
+Depends: R (>= 4.2)
+Imports: sf
+Suggests: testthat, usethis, ows4R
+Description: Spatial datasets for fisheries data interoperability
+License: MIT
+URL: https://github.com/fdiwg/fdisfdata
+BugReports: https://github.com/fdiwg/fdisfdata/issues
+RoxygenNote: 7.3.3
+Encoding: UTF-8
+LazyData: true
