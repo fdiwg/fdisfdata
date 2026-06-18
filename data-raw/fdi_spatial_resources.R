@@ -81,10 +81,16 @@ fao_major_areas_lowres = fao_areas_lowres[fao_areas_lowres$F_LEVEL == 'MAJOR',]
 usethis::use_data(fao_major_areas_lowres, overwrite = TRUE)
 
 #CWP layers of interests
+#wjas
 wja_level0 = get_baselayer(WFS_UNFAO_NFI, "cwp:wja_level0") |> sf::st_make_valid()
 usethis::use_data(wja_level0, overwrite = TRUE)
 wja_level1 = get_baselayer(WFS_UNFAO_NFI, "cwp:wja_level1") |> sf::st_make_valid()
 usethis::use_data(wja_level1, overwrite = TRUE)
+#grids
+grid_5deg = get_baselayer(WFS_UNFAO_NFI, "cwp:cwp-grid-map-5deg_x_5deg_erased") |> sf::st_make_valid()
+usethis::use_data(grid_5deg, overwrite = TRUE)
+grid_1deg = get_baselayer(WFS_UNFAO_NFI, "cwp:cwp-grid-map-1deg_x_1deg_erased") |> sf::st_make_valid()
+usethis::use_data(grid_1deg, overwrite = TRUE)
 
 #ICCAT layers of interest
 
