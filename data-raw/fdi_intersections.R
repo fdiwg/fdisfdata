@@ -23,6 +23,10 @@ usethis::use_data(intersections, overwrite = TRUE)
 #FAO/CWP
 wja_level1__x__rfb_comp = WFS_UNFAO_NFI$getFeatures("int:wja_level1__x__rfb_comp") |> sf::st_make_valid()
 usethis::use_data(wja_level1__x__rfb_comp, overwrite = TRUE)
+wja_level1__x__cwp_grid_5deg_x_5deg = WFS_UNFAO_NFI$getFeatures("int:wja_level1__x__cwp-grid-map-5deg_x_5deg") |> sf::st_make_valid()
+usethis::use_data(wja_level1__x__cwp_grid_5deg_x_5deg, overwrite = TRUE)
+wja_level1__x__cwp_grid_1deg_x_1deg = WFS_UNFAO_NFI$getFeatures("int:wja_level1__x__cwp-grid-map-1deg_x_1deg") |> sf::st_make_valid()
+usethis::use_data(wja_level1__x__cwp_grid_1deg_x_1deg, overwrite = TRUE)
 #IOTC
 wja_level1__x__iotc_indian_ocean_areas = WFS_UNFAO_NFI$getFeatures("int:wja_level1__x__iotc_indian_ocean_areas") |> sf::st_make_valid()
 usethis::use_data(wja_level1__x__iotc_indian_ocean_areas, overwrite = TRUE)
