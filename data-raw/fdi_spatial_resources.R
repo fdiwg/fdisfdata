@@ -18,6 +18,16 @@ get_baselayer <- function(wfs, layer, cql_filter = NULL, crs = NULL){
   return(out)
 }
 
+#write_geoparquet
+write_geoparquet <- function(sf, filename){
+  sf |> tibble::as_tibble() |> arrow::write_parquet(filename)
+}
+
+#read_geoparquet
+read_geoparquet <- function(filename){
+  arrow::open_dataset(filename) |> sf::st_as_sf()
+}
+
 #FAO-NFI spatial layers
 #ows4R connector for FAO/NFI
 WFS_UNFAO_NFI <- ows4R::WFSClient$new(
